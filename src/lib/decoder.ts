@@ -35,7 +35,7 @@ export function resolveBlock(block: Buffer): Array<NozomiID> {
   return nozomiID
 }
 
-export function getAllGalleryID(): any {
+export function getAllGalleryID(): number[] {
   
   const nozomiBlock = getBlock()
   return resolveBlock(nozomiBlock)
