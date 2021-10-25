@@ -6,6 +6,9 @@ export default function crawler(/* gallery: IGalleryInfo */): void {
   // eslint-disable-next-line prefer-const
   let gallery2 = utils.getAllGalleryID()
   
+  // continue
+  gallery2.splice(0, 54860)
+
   setInterval(() => {
     if (gallery2.length === 0) {
       console.log('done.')
