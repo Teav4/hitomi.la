@@ -6,15 +6,15 @@ import { INFO_URL } from '../config/global.config'
 
 // @ts-ignore
 export const getGalleryInfo: IGetGalleryInfo = async (galleryID: NozomiID) => {
-  let url = `${INFO_URL}/galleries/${galleryID}.js`
+  const url = `${INFO_URL}/galleries/${galleryID}.js`
   
-  let response = await request.get(url)
+  const response = await request.get(url)
   
-  let json = JSON.parse(response.replace('var galleryinfo = ', '').trim())
+  const json = JSON.parse(response.replace('var galleryinfo = ', '').trim())
 
   // get series
-  let url2 = `${INFO_URL}/galleryblock/${galleryID}.html`
-  let response2 = await request.get(url2)
+  const url2 = `${INFO_URL}/galleryblock/${galleryID}.html`
+  const response2 = await request.get(url2)
   let series = ''
   
   // loop each row to find series name

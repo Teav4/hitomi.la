@@ -12,9 +12,9 @@ export function decodeBase64(data: string): any {
 }
 
 function toArrayBuffer(buf: Buffer) {
-  var ab = new ArrayBuffer(buf.length);
-  var view = new Uint8Array(ab);
-  for (var i = 0; i < buf.length; ++i) {
+  const ab = new ArrayBuffer(buf.length);
+  const view = new Uint8Array(ab);
+  for (let i = 0; i < buf.length; ++i) {
       view[i] = buf[i];
   }
   return ab;
@@ -22,12 +22,13 @@ function toArrayBuffer(buf: Buffer) {
 
 export function resolveBlock(block: Buffer): Array<NozomiID> {
 
-  let arrayBuffer = toArrayBuffer(block)
+  const arrayBuffer = toArrayBuffer(block)
+  // eslint-disable-next-line prefer-const
   let nozomiID = []
 
-  var total = arrayBuffer.byteLength/4;
+  const total = arrayBuffer.byteLength/4;
   const view = new DataView(arrayBuffer);
-  for (var i = 0; i < total; i++) {
+  for (let i = 0; i < total; i++) {
     nozomiID.push(view.getInt32(i*4, false /* big-endian */));
   }
   
