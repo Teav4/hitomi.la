@@ -14,6 +14,7 @@ test('get gallery info', async () => {
   expect(result).toHaveProperty('date')
   expect(result).toHaveProperty('images')
   expect(result).toHaveProperty('series')
+  expect(result).toHaveProperty('artist')
 
   expect(result.date).toBe('2021-10-24 18:38:00-05')
   expect(result.title).toBe('Nurse AYM…')

@@ -6,6 +6,7 @@ test("base64 decode", () => {
 
 test('get galleryID', () => {
   let gallery = getAllGalleryID()
+  console.log(gallery)
 
   expect(gallery).toBeInstanceOf(Array)
   expect(gallery.length).not.toBe(0)

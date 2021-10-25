@@ -1,7 +1,7 @@
 /**
  * Get Gallery Info
  */
-declare type IGetGalleryInfo = (galleryID: NozomiID) => {
+declare type IGetGalleryInfo = (galleryID: NozomiID) => Promise<{
   date: String,
   language: String,
   japaneseTitle: String,
@@ -15,4 +15,4 @@ declare type IGetGalleryInfo = (galleryID: NozomiID) => {
   title: String,
   images: String[],
   series: String,
-}
+}>
