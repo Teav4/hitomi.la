@@ -1,10 +1,12 @@
-export const delayMillis = (delayMs: number): Promise<void> => new Promise(resolve => setTimeout(resolve, delayMs));
+import mongoose from 'mongoose'
+import databaseConfig from './config/database.config'
+import crawler from './crawler'
 
-export const greet = (name: string): string => `Hello ${name}`
+const DB_CONNECTION_URL = `${databaseConfig.MONGO_HOSTNAME}:${databaseConfig.MONGO_PORT}/${databaseConfig.MONGO_DB}`
 
-export const foo = async (): Promise<boolean> => {
-  console.log(greet('World'))
-  await delayMillis(1000)
-  console.log('done')
-  return true
-}
+mongoose
+	.connect(DB_CONNECTION_URL)
+	.then(() => {
+    crawler()
+	})
+
