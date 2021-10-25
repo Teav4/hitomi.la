@@ -44,5 +44,18 @@
     "ts-node": "^9.1.1",
     "typedoc": "^0.20.35",
     "typescript": "^4.2.3"
+  },
+  "dependencies": {
+    "@types/atob": "^2.1.2",
+    "@types/btoa": "^1.2.3",
+    "@types/cheerio": "^0.22.30",
+    "@types/mongoose": "^5.11.97",
+    "@types/request": "^2.48.7",
+    "@types/request-promise": "^4.1.48",
+    "btoa": "^1.2.1",
+    "cheerio": "^1.0.0-rc.10",
+    "mongoose": "^6.0.12",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6"
   }
 }

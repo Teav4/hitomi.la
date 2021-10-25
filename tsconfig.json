@@ -28,6 +28,12 @@
       "DOM"
     ]
   },
+  "ts-node": {
+    "files": true
+  },
+  "files": [
+    "src/types/main.d.ts"
+  ],
   "include": [
     "src/**/*.ts"
   ],
