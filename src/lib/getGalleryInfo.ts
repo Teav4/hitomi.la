@@ -34,7 +34,7 @@ export const getGalleryInfo = async (galleryID: NozomiID): IGalleryInfo => {
     language: json.language,
     japaneseTitle: json.japanese_title,
     id: json.id,
-    tags: json.tags.map((_tag: any) => ({ name: _tag.tag, gender: _tag.female === 1 ? 'female': 'male' })),
+    tags: json.tags.map((_tag: any) => ({ name: _tag.tag, gender: _tag.female == 1 ? 'female': 'male' })),
     type: json.type,
     languageLocalName: json.language_localname,
     title: json.title,
